@@ -1,0 +1,30 @@
+<h1><font color = "green", face = "arial"><b><u>Lista de Posts:</u></b></font></h1>
+
+<h1>
+    <font color = "red", face = "arial">
+        {{nome}} 
+        {{sobrenome}}
+    </font>
+</h1>
+
+{{#each posts}} 
+    <small> 
+        {{dataValues.createdAt}}
+    </small> 
+
+    <h1>
+        {{dataValues.titulo }}
+    </h1>
+
+    <p>
+    {{dataValues.conteudo}}
+    </p>
+
+   <a href="/deletar/{{dataValues.id}}">
+       <button>
+           Deletar
+       </button>
+   </a> 
+<hr>
+{{/each}}
+
